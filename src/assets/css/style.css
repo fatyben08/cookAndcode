@@ -1,26 +1,37 @@
-h1, p, ul ,main{
+h1,
+p,
+ul,
+main {
     margin: 0;
 }
-ul {
-padding: 0;
+
+main {
+    margin-bottom: 40px;
 }
 
-h2{
+ul {
+    padding: 0;
+}
+
+h2 {
     width: 50%;
     align-self: center;
+}
+
+a {
+    display: flex;
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #f7f6f1;
-
-
+    overflow-x: hidden;
 }
 
 input {
     padding: 0.7rem;
-    width: 13rem;
+    /* width: 13rem; */
     border-radius: 0.5rem;
     background: #FF7E73;
     outline: none;
@@ -28,11 +39,12 @@ input {
 
 
 header {
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 20px 20px;
     background-color: #f0dfd8;
-   
+
 }
 
 .logo h1 {
@@ -44,9 +56,10 @@ header {
 
 
 .logo p {
-    font-size: 15px;
+    font-size: 12px;
     color: #a27b71;
 }
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -56,38 +69,56 @@ header {
 nav {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+nav #menu-toggle {
+    display: none;
 }
 
 nav ul {
     list-style: none;
-    width: 60rem;
+    gap: 2rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: #FF7E73;
-    font-size: 25px;
+    font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
+    align-self: center;
 }
+
+
 
 nav input {
     border: none;
 }
 
+
 main {
     background-image: url("../img/brooke-lark-08bOYnH_r_E-unsplash.jpg");
     background-repeat: no-repeat;
-    background-position: top 100%;
+    /* background-position: 100%; */
     background-size: 120% 100%;
     background-attachment: fixed;
     background-size: cover;
     position: relative;
-   
+
+}
+
+.title-column a {
+    text-decoration: none;
+    color: #FF7E73;
+    font-size: 15px;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    align-self: center;
 }
 
 .top-recipes {
@@ -101,7 +132,7 @@ main {
 
 .top-recipes h2 {
     margin-top: 2rem;
-    font-size: 35px;
+    font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     color: #776464;
@@ -117,10 +148,9 @@ main {
 .recipe {
     padding: 0.5rem;
     width: 18rem;
+    height: 20rem;
     background-color: white;
     border-radius: 8px;
-    flex: 1 1 30%;
-    max-width: 18rem;
     text-align: center;
     margin: 1rem;
     box-sizing: border-box;
@@ -128,15 +158,24 @@ main {
 }
 
 .recipe img {
-    width: 100%;
-    height: 20rem;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
-    border-radius:5px;
+    border-radius: 5px;
+}
+
+.recipe:hover {
+    img {
+        width: 100%;
+        transition: 0.3s;
+    }
 }
 
 .recipe p {
     padding: 10px;
-    font-size: 23px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
     color: #FF7E73;
 }
 
@@ -147,24 +186,190 @@ main {
     align-items: center;
 }
 
-.search{
-    width: 17rem;
+.search {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 1rem;
 }
 
-.search > img {
+.search>img {
     height: 1.3rem;
     width: 1.3rem;
 
 }
 
-.logo > img {
+.logo>img {
     width: 8rem;
-    height: 4rem;
+    height: 5rem;
+}
+
+.profil-icon {
+    height: 2rem;
+    width: 2rem;
+    color: #FF7E73;
+    align-self: center;
+}
+
+nav .icons {
+    display: none;
+}
+
+@media screen and (max-width:1080px) {
+    main {
+        background-size: cover;
+    }
+
+    .logo>img {
+        width: 4rem;
+        height: 2rem;
+        align-self: center;
+        object-fit: contain;
+    }
+
+    .logo h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+        color: #FF7E73;
+    }
+
+
+    .logo p {
+        display: none;
+    }
+
+    nav a,
+    input::placeholder {
+        font-size: 10px;
+    }
+
+    .search>img {
+        height: 1rem;
+        width: 1rem;
+
+    }
+
+    input {
+        padding: 0.2rem;
+        /* width: 7rem; */
+    }
+
+    .top-recipes h2 {
+        margin-top: 2rem;
+        font-size: 18px;
+    }
+
+    .recipe {
+        padding: 0.5rem;
+        width: 10rem;
+        height: 15rem;
+    }
+
+    .recipe img {
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .recipe p {
+        padding: 10px;
+        font-size: 15px;
+    }
 
 }
 
+@media screen and (max-width:600px) {
 
 
+    header {
+        width: calc(100vw - 40px);
+        height: 4rem;
+
+        z-index: 1;
+        top: 0;
+    }
+
+    nav #menu-toggle {
+        display: block;
+    }
+
+
+    nav ul {
+        width: 100vw;
+        height: calc(100vh - (4rem + 40px));
+        position: fixed;
+        z-index: 1;
+        left: -100vw;
+        top: calc(4rem + 40px);
+        flex-direction: column;
+        transition: .3s;
+        background: rgb(119, 100, 100, 0.9);
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 15rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: medium;
+        background: #FF7E73;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    main {
+        background-size: cover;
+    }
+
+    .recipe-flex {
+        flex-direction: column;
+        width: 86%;
+    }
+
+    .top-recipes h2 {
+        margin-top: 2rem;
+        font-size: 18px;
+        color: #f7f6f1;
+        margin-bottom: 2rem;
+    }
+
+    .recipe {
+        padding: 0.5rem;
+        width: 78%;
+        height: 15rem;
+    }
+
+    .recipe img {
+        width: 88%;
+        height: 88%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .logo>img {
+        width: 8rem;
+        align-self: center;
+        object-fit: contain;
+    }
+
+    .logo {
+        margin-left: -4rem;
+        display: none;
+    }
+
+    nav .icons {
+        display: block;
+    }
+}

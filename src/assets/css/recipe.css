@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: url('../img/potiron.jpeg'); 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-container {
+    background-color: #FFE5DD;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-image {
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.ingredients, .preparation {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.save-btn {
+    background-color: #F28B82;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-btn:hover {
+    background-color: #E57373;
+}

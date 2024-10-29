@@ -13,15 +13,15 @@
         <p class="description">
             Cook&Code, créé en 2024 par Fatimaezzahra BENCHEIKH, vous apporte chaque jour 
             de nouvelles recettes, techniques, vidéos, trucs de pro pour vous aider à vous faire 
-            plaisir en cuisine.<br><br>
+            plaisir en cuisine.
             Fatimaezzahra est également l'auteur du blog Biodélices et a publié de nombreux livres.
         </p>
         <div class="social-media">
             <p>Suivez Cook&Code</p>
             <div class="icons">
-                <img src="assets/img/instagram.png" alt="Instagram">
-                <img src="assets/img/facebook.png" alt="Facebook">
-                <img src="assets/img/pinterest.png" alt="Pinterest">
+                <img src="assets/img/coffee_flickr_instagram_48785.png" alt="Instagram">
+                <img src="assets/img/coffee_facebook_48792.png" alt="Facebook">
+                <img src="assets/img/coffee_pinterest_48739.png" alt="Pinterest">
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ class Database
     {
         try {
 
-            $this->db = new PDO('mysql:host=172.18.0.2;dbname=cookAndcode;charset=utf8', 'root', 'pw');
+            $this->db = new PDO('mysql:host=mysql;dbname=cookAndcode;charset=utf8', 'root', 'pw');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }
@@ -18,6 +18,9 @@ class Database
         $this->db = NULL;
     }
 }
+
+
+
 
 
 

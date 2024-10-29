@@ -5,6 +5,9 @@ const recipes = document.getElementsByClassName('recipes');
 for (let i = 0; i < linksMenu.length; i++) {
 
     linksMenu[i].addEventListener('click', function (e) {
+
+
+
         e.preventDefault();
         openMenu(i);
     });
@@ -25,9 +28,11 @@ for (let i = 0; i < recipes.length; i++) {
 
 }
 
+const closeMenuButtons = document.getElementsByClassName('close-menu');
 
-   
-
+for (let i = 0; i < closeMenuButtons.length; i++) {
+    closeMenuButtons[i].addEventListener('click', closeMenu);
+}
 
 function openMenu(i) {
     // on recupere l'id du menu a ouvrir
@@ -55,3 +60,16 @@ function closeMenu() {
         recetteMenu.classList.remove('active');
     }
 }
+
+
+const menuToggle = document.getElementById('menu-toggle');
+const menuNav = document.getElementById('menu-nav');
+
+menuToggle.addEventListener('click', function () {
+    if (menuNav.classList.contains('active')) {
+        menuNav.classList.remove('active');
+        closeMenu();
+    } else {
+        menuNav.classList.add('active');
+    }
+});
